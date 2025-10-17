@@ -4,6 +4,7 @@ import { ethers } from "ethers";
 import HakiTokenABI from "../../abis/HakiToken.json";
 import BountyRegistryABI from "../../abis/BountyRegistry.json";
 import BountyEscrowABI from "../../abis/BountyEscrow.json";
+import HomeButton from "../components/HomeButton";
 
 const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_REGISTRY_ADDRESS;
 const ESCROW_ADDRESS = process.env.NEXT_PUBLIC_ESCROW_ADDRESS;
@@ -283,7 +284,11 @@ export default function NGOPage() {
             ))}
           </div>
         ))}
+        
       </section>
+      <div>
+          <HomeButton />
+      </div>
 
       <style jsx>{`
         .admin-container { max-width: 900px; margin: 0 auto; padding: 1.5rem; font-family: sans-serif; }

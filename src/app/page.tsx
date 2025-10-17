@@ -21,7 +21,7 @@ export default function HomePage() {
           justify-content: center;
           gap: 12px;
           font-size: 2rem;
-          margin-bottom: 2rem;
+          margin-bottom: 1.5rem;
         }
         .role-button {
           display: block;
@@ -42,11 +42,34 @@ export default function HomePage() {
         .role-button:hover {
           background: #005bb5;
         }
+        .warning-box {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background: #fff3cd;
+          border: 1px solid #ffeeba;
+          color: #856404;
+          padding: 12px;
+          border-radius: 6px;
+          margin-bottom: 1.5rem;
+          font-size: 0.95rem;
+          text-align: left;
+        }
+        .warning-box span.icon {
+          font-size: 1.3rem;
+        }
       `}</style>
 
       <div className="title">
         <Image src={logo} alt="Blockchain Logo" width={40} height={40} />
         <span>HAKI Blockchain Layer</span>
+      </div>
+
+      <div className="warning-box">
+        <span className="icon">⚠️</span>
+        <span>
+          Point to note: A MetaMask wallet connected to <b>Sepolia (Ethereum Testnet)</b> is required to interact with this layer.
+        </span>
       </div>
 
       <Link href="/admin" className="role-button">Admin</Link>

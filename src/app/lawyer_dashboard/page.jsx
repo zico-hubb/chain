@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import HakiTokenABI from "../../abis/HakiToken.json";
 import BountyRegistryABI from "../../abis/BountyRegistry.json";
+import HomeButton from "../components/HomeButton";
 
 const ROLES = {
   ADMIN_ROLE:
@@ -312,6 +313,9 @@ export default function LawyerPage() {
             </li>
           ))}
         </ul>
+      </div>
+      <div>
+        <HomeButton />
       </div>
     </div>
   );

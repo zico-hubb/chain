@@ -5,6 +5,7 @@ import { ethers } from "ethers";
 import BountyRegistryABI from "../../abis/BountyRegistry.json";
 import BountyEscrowABI from "../../abis/BountyEscrow.json";
 import HakiTokenABI from "../../abis/HakiToken.json";
+import HomeButton from "../components/HomeButton";
 
 const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_BOUNTY_REGISTRY;
 const ESCROW_ADDRESS = process.env.NEXT_PUBLIC_ESCROW_ADDRESS;
@@ -322,6 +323,9 @@ export default function AdminPage() {
             ))}
         </div>
       ))}
+      <div>
+        <HomeButton />
+      </div>
     </div>
   );
 }

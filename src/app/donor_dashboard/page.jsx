@@ -4,6 +4,7 @@ import { ethers } from "ethers";
 import BountyRegistryABI from "../../abis/BountyRegistry.json";
 import BountyEscrowABI from "../../abis/BountyEscrow.json";
 import HakiTokenABI from "../../abis/HakiToken.json";
+import HomeButton from "../components/HomeButton";
 
 export default function DonorPage() {
   const [signer, setSigner] = useState(null);
@@ -240,6 +241,9 @@ export default function DonorPage() {
           <p>Your Contribution: {donorContributions[b.id] ?? "0"} HAKI</p>
         </div>
       ))}
+      <div>
+        <HomeButton />
+      </div>
     </div>
   );
 }
